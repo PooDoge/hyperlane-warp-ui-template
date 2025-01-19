@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ConnectWalletButton } from '../../features/wallet/ConnectWalletButton';
-import Logo from '../../images/logos/app-logo.svg';
 import Title from '../../images/logos/app-title.svg';
 import ChewyLogo from '../icons/ChewyLogo';
 

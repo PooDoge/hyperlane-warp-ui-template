@@ -1,7 +1,7 @@
 import { ChainMap } from '@hyperlane-xyz/sdk';
 import { ADDRESS_BLACKLIST } from './blacklist';
 
-const isDevMode = process?.env?.NODE_ENV === 'development';
+const isDevMode = process?.env?.NODE_ENV === 'production';
 const version = process?.env?.NEXT_PUBLIC_VERSION || '0.0.0';
 const registryUrl = process?.env?.NEXT_PUBLIC_REGISTRY_URL || undefined;
 const registryBranch = process?.env?.NEXT_PUBLIC_REGISTRY_BRANCH || undefined;
@@ -28,13 +28,13 @@ interface Config {
 export const config: Config = Object.freeze({
   addressBlacklist: ADDRESS_BLACKLIST.map((address) => address.toLowerCase()),
   chainWalletWhitelists,
-  enableExplorerLink: false,
+  enableExplorerLink: true,
   isDevMode,
   registryUrl,
   registryBranch,
   registryProxyUrl,
   showDisabledTokens: false,
-  showTipBox: true,
+  showTipBox: false,
   version,
   transferBlacklist,
   walletConnectProjectId,
