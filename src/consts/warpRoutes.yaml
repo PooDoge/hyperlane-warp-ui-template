@@ -2,5 +2,43 @@
 # These configs will be merged with the warp routes in the configured registry
 # The input here is typically the output of the Hyperlane CLI warp deploy command
 ---
-tokens: []
+tokens:
+  - addressOrDenom: "0x3fAd9Dc005231C51DF009d63c3311843B56b73bc"
+    chainName: shibarium
+    collateralAddressOrDenom: "0x2761723006d3Eb0d90B19B75654DbE543dcd974f"
+    connections:
+      - token: ethereum|dogechain|0x1b47A8ae20fC5DC87fe566E97E693Fa6c761C851
+    decimals: 18
+    name: CHEWY
+    logoURI: https://raw.githubusercontent.com/ChewySwap/chewy-tokenlist/main/tokens/chewy.webp
+    standard: EvmHypCollateral
+    symbol: ChewySwap
+  - addressOrDenom: "0x1b47A8ae20fC5DC87fe566E97E693Fa6c761C851"
+    chainName: dogechain
+    connections:
+      - token: ethereum|shibarium|0x3fAd9Dc005231C51DF009d63c3311843B56b73bc
+    decimals: 18
+    name: CHEWY
+    logoURI: https://raw.githubusercontent.com/ChewySwap/chewy-tokenlist/main/tokens/chewy.webp
+    standard: EvmHypSynthetic
+    symbol: ChewySwap
+  - addressOrDenom: "0x5d821e9aAb7760D89B62319Cdf012B6cda1b0e6C"
+    chainName: dogechain
+    collateralAddressOrDenom: "0xe3fcA919883950c5cD468156392a6477Ff5d18de"
+    connections:
+      - token: ethereum|shibarium|0x09Da9802e10054193D4Dc9E22dfbf3848E7c93a7
+    decimals: 18
+    name: Doge Eat Doge
+    logoURI: https://raw.githubusercontent.com/omnomcommunity/tokenlist/refs/heads/main/token/omnom.gif
+    standard: EvmHypCollateral
+    symbol: OMNOM
+  - addressOrDenom: "0x09Da9802e10054193D4Dc9E22dfbf3848E7c93a7"
+    chainName: shibarium
+    connections:
+      - token: ethereum|dogechain|0x5d821e9aAb7760D89B62319Cdf012B6cda1b0e6C
+    decimals: 18
+    name: Doge Eat Doge
+    logoURI: https://raw.githubusercontent.com/omnomcommunity/tokenlist/refs/heads/main/token/omnom.gif
+    standard: EvmHypSynthetic
+    symbol: OMNOM
 options: {}
